@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link href="rezervasyon.css" type="text/css" rel="stylesheet"/>
+
+
+  <!---custom css link--->
+
+  <link href="stil_dosyasi.css" type="text/css" rel="stylesheet"/>
+
+  <!---boxicons link-->
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+  rel="stylesheet"/>
+
+     <!---google fonts link-->
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?
+     family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+
+
+
+    <body>
+
+        <!---header design-->
+        <header class="sticky">
+            <img src="resim/logo.png" height="90">
+    
+            <a href="#" class="logo"  onclick="window.location.href='index.html'">AKASLAN<span>TURİZM</span></a>
+    
+            <ul class="navbar">
+                <li><a href="#">Servisler</a></li>
+                
+                <li><a href="onclick="window.location.href='hakkımızda.html'">Hakkımızda</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+    
+            <div class="h-right">
+                <a href="#">Bizi Takip Edin</a>
+                <a href="https://www.instagram.com/akaslanturizm/"><i class="ri-instagram-fill"></i></a>
+                <a href="https://whatsapp/05354940385"><i class="ri-whatsapp-fill"></i></i></a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+    
+            </div>
+        </header>
+    
+
+
+
+
+
+
+
+        <div class="container">
+            <h2>Yolcu Bilgileri</h2>
+            <form>
+                <br>
+                <label for="name">Ad Soyad:</label>
+                <input type="text" id="name" name="name" required><label for="phone">Telefon Numarası:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            
+            <h2>Ödeme Bilgileri</h2>
+           
+    
+            <button type="submit">Ödeme Yaptım</button>
+        </form>
+        <div class="iban-container">
+            <h3>Hesap Sahibi</h3>
+            <p>Okan Akaslan</p><br>
+            <h3 >IBAN Numarası</h3>
+            <p id="TR84 0011 1000 0000 0150 0177 41">TR84 0011 1000 0000 0150 0177 41</p>
+
+            <button class="copy-btn" onclick="copyIBAN()">Kopyala</button>
+            <p>Ödemeden Sonra İletişime Geçin </p>
+            <div class="footer-box">
+                
+                <a href="tel:+90 5354940385" class="">
+                    <div class="icon">
+                        <i class="las la-headset"></i>
+                    </div>
+                    <div class="yazi">
+                        						<b>+90 535 494 03 85</b>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="resim/072af0c3-e5c9-4558-bcb8-021d57021130.jpg" alt="Yolculuk Resmi">
+    </div>
+
+
+
+    <script>
+        function copyIBAN( ) {
+            var ibanText = document.getElementById("iban").innerText.replace("IBAN Numarası: ", "TR84 0011 1000 0000 0150 0177 41");
+            var tempInput = document.createElement("input");
+            tempInput.value = ibanText;
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("IBAN numarası kopyalandı!");
+        }
+
+
+
+
+
+
+
+
+    </script>
+    
+    </body>
+    </html>
